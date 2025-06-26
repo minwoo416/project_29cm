@@ -1,0 +1,83 @@
+/* ------------------------------s : header */
+body
+header {
+    /* width:1720px; margin:0 auto; */
+    padding-top:10px;
+}
+header .gnb {width:1720px; margin:0 auto;}
+header .gnb .top_menu {text-align:right;}
+header .gnb .top_menu a {font-size:0.75rem; margin-left:20px;}
+header .gnb .top_menu a:first-child {margin-left:0;}
+header .gnb .bottom_menu {
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items:center;
+    padding:10px 0;
+    
+}
+header .gnb .bottom_menu h1 {}
+header .gnb .bottom_menu h1 #logo {}
+header .gnb .bottom_menu .human_heart_cart {}
+header .gnb .bottom_menu .human_heart_cart a {}
+/* --------개별 마이페이지, 위시리스트, 카트-------- */
+header .gnb .bottom_menu .human_heart_cart .my_page {}
+header .gnb .bottom_menu .human_heart_cart .wishlist {margin:0 20px 0;}
+header .gnb .bottom_menu .human_heart_cart .cart{}
+header .gnb .bottom_menu .human_heart_cart a img {}
+header .lnb {
+    width:1720px; margin:0 auto;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items:center;
+}
+header .lnb .category {
+    display:flex; flex-flow:row nowrap;
+    align-items:center;
+}
+header .lnb .category .category_more {}
+header .lnb .category .category_more img {}
+header .lnb .category .category_menu {margin-left:20px;}
+header .lnb .category .category_menu a {margin-right:30px; font-weight:500;}
+header .lnb .category .category_menu a:last-child {margin-right:0;}
+header .lnb .search {
+    border:1px solid #000;
+    border-radius:30px;
+    width:245px; height:25px;
+    position:relative;
+}
+header .lnb .search img {
+    position:absolute;
+    top:0; right:14px;
+}
+header .long_banner {
+    width:100vw;
+    text-align:center; background:#000;
+    position:relative;height:30px;
+    margin-top:10px;
+}
+header .long_banner a {color:#fff; line-height:30px;}
+header .long_banner a span {color:#00FF40;}
+header .long_banner .close {
+    position:absolute; top:0; right:0;
+}
+header .long_banner .close img {}
+/* ------------------------------e : header */
+/* ------------------------------s : main */
+/* ------------------1행 배너 */
+main {}
+main .banner {}
+main .banner .banner_wrap {/* 보이는 배너 */
+    width:100vw; overflow:hidden;
+    margin-bottom:30px;
+}
+main .banner .banner_wrap .banner_container {/* 모든 배너 묶음 */
+    display:flex; flex-flow:row nowrap; gap:30px;
+}
+main .banner .banner_wrap .banner_container a {}
+main .banner .banner_wrap .banner_container a img {}
+main .banner .btn_wrap {}
+main .banner .btn_wrap p {font-size:0.75rem;}
+main .banner .btn_wrap p span {font-weight:900;}
+main .banner .btn_wrap .prev_btn {}
+main .banner .btn_wrap .prev_btn img {}
+main .banner .btn_wrap .next_btn {}
+main .banner .btn_wrap .next_btn img {}
+/* ------------------------------e : main */
