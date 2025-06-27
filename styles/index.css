@@ -48,7 +48,7 @@ header .lnb .search img {
     top:0; right:14px;
 }
 header .long_banner {
-    width:100vw;
+    width:100%;
     text-align:center; background:#000;
     position:relative;height:30px;
     margin-top:10px;
@@ -61,11 +61,11 @@ header .long_banner .close {
 header .long_banner .close img {}
 /* ------------------------------e : header */
 /* ------------------------------s : main */
-/* ------------------1행 배너 */
+/* ----------------------------------------------------------------------------------------1행 배너 */
 main {}
 main .banner {}
 main .banner .banner_wrap {/* 보이는 배너 */
-    width:100vw; overflow:hidden;
+    width:100%; overflow:hidden;
     margin-bottom:30px;
 }
 main .banner .banner_wrap .banner_container {/* 모든 배너 묶음 */
@@ -73,11 +73,112 @@ main .banner .banner_wrap .banner_container {/* 모든 배너 묶음 */
 }
 main .banner .banner_wrap .banner_container a {}
 main .banner .banner_wrap .banner_container a img {}
-main .banner .btn_wrap {}
+main .banner .btn_wrap {display:flex; align-items:center;}
 main .banner .btn_wrap p {font-size:0.75rem;}
 main .banner .btn_wrap p span {font-weight:900;}
 main .banner .btn_wrap .prev_btn {}
 main .banner .btn_wrap .prev_btn img {}
 main .banner .btn_wrap .next_btn {}
 main .banner .btn_wrap .next_btn img {}
+/* ----------------------------------------------------------------------------------------2행 스페셜오더 */
+/* 모든 섹션 탑에 마진 */
+main .special_order 
+{background:yellow; 
+    width:1460px; margin:100px auto 0; text-align:center;
+}
+main .special_order h2 {font-size:2.5rem; font-weight:600;} /* 각 영역 h2 */
+main .special_order > p {margin:15px 0 50px;}
+main .special_order > p a {}
+main .special_order .special_wrap {
+    display:flex;
+}
+main .special_order .special_wrap .prev_btn {}
+main .special_order .special_wrap .prev_btn img {}
+main .special_order .special_wrap .special_product_wrap {display:flex; margin:0 50px;}
+main .special_order .special_wrap .special_product_wrap .specialProduct {
+    margin-right:50px;
+    text-align:left;
+}
+main .special_order .special_wrap .special_product_wrap .specialProduct:last-child {margin-right:0;}
+main .special_order .special_wrap .special_product_wrap .specialProduct a {}
+main .special_order .special_wrap .special_product_wrap .specialProduct a img {}
+main .special_order .special_wrap .special_product_wrap .specialProduct .special_order_content {
+    display:flex; flex-flow:row nowrap;
+}
+main .special_order .special_wrap .special_product_wrap .specialProduct .special_order_content p:nth-child(1) {font-size:1.25rem; font-weight:700;}
+main .special_order .special_wrap .special_product_wrap .specialProduct .special_order_content p:nth-child(2) {margin:0 10px;}
+main .special_order .special_wrap .special_product_wrap .specialProduct .special_order_content p:nth-child(3) {}
+main .special_order .special_wrap .special_product_wrap .specialProduct > p {}
+main .special_order .special_wrap .special_product_wrap .specialProduct > p:nth-of-type(1) {margin:30px 0 20px;font-weight:600;}
+main .special_order .special_wrap .special_product_wrap .specialProduct > p:nth-of-type(2) {font-size:0.875rem;}
+/* ----------------------------------------------------------------------------------------3행 Showcase */
+main .showcase {background:red; text-align:center;
+    width:100%; margin:100px auto 0;
+}
+main .showcase h2 {font-size:2.5rem; font-weight:600;}
+main .showcase > p {margin:15px 0 50px;}
+main .showcase p a{}
+main .showcase .showcase_container {}
+main .showcase .showcase_container .showcase_wrap {/* 공통 소케이스 이 부분은 1920px  */
+    display:flex; position:relative; background:aqua; align-items:center;
+}
+/* 개별 쇼케이스 부분 */
+/* 1 */
+main .showcase .showcase_container .tabledhote {height:400px; }
+main .showcase .showcase_container .tabledhote .showcaseMoreBtn_wrap p {
+    position:absolute; left:438px; top:161px;
+    font-size:3.75rem; color:#fff;
+    font-family: 'SF_HambakSnow', serif;
+}
+main .showcase .showcase_container .tabledhote .showcaseMoreBtn_wrap .more_btn {
+    position:absolute; bottom:20px; right:740px;
+    padding:15px 30px;
+    background:#000; color:#fff;
+}
+/* 2 */
+main .showcase .showcase_container .nick_nicole {float:right; position:relative;}
+main .showcase .showcase_container .nick_nicole .showcaseMoreBtn_wrap p {
+    position:absolute; right:600px; top:137px;
+    
+}
+main .showcase .showcase_container .nick_nicole .showcaseMoreBtn_wrap p {font-size:1.875rem; color:#fff; font-family: 'SF_HambakSnow', serif; line-height:1.5;}
+main .showcase .showcase_container .nick_nicole .showcaseMoreBtn_wrap p span {
+    font-size:3.75rem; color:#fff;
+    font-family: 'SF_HambakSnow', serif;
+}
+main .showcase .showcase_container .nick_nicole .showcaseMoreBtn_wrap .more_btn {
+    position:absolute; bottom:20px; right:1046px;
+    padding:15px 30px;
+    background:#000; color:#fff;
+}
+/* 3 */
+main .showcase .showcase_container .sienne {clear:both; position:relative;}
+main .showcase .showcase_container .sienne .showcaseMoreBtn_wrap p {
+    position:absolute; left:623px; top:161px;
+    font-size:3.75rem; color:#fff;
+    font-family: 'SF_HambakSnow', serif; letter-spacing:0.2em;
+}
+main .showcase .showcase_container .sienne .showcaseMoreBtn_wrap .more_btn {
+    position:absolute; bottom:20px; right:740px;
+    padding:15px 30px;
+    background:#000; color:#fff;
+}
+main .showcase .showcase_container .showcase_wrap > p {height:400px;}
+main .showcase .showcase_container .showcase_wrap > p img {}
+main .showcase .showcase_container .showcase_wrap .showcaseMoreBtn_wrap {}
+main .showcase .showcase_container .showcase_wrap .showcaseMoreBtn_wrap p {}
+main .showcase .showcase_container .showcase_wrap .showcaseMoreBtn_wrap .more_btn {}
+main .showcase .showcase_container .showcase_wrap .showcase_content {
+    height:400px; background:blue;
+    display:flex; flex-flow:column nowrap; justify-content:center;
+    text-align:left; margin-left:50px;
+}
+main .showcase .showcase_container .nick_nicole .showcase_content {/* 개별 컨텐츠 */ text-align:right; margin:0 50px 0 0;}
+main .showcase .showcase_container .showcase_wrap .showcase_content > p:nth-child(1) {font-size:1.75rem; font-weight:700;}
+main .showcase .showcase_container .showcase_wrap .showcase_content > p:nth-child(2) {margin:10px 0 50px;}
+main .showcase .showcase_container .showcase_wrap .showcase_content .showcase_benefit {}
+main .showcase .showcase_container .showcase_wrap .showcase_content .showcase_benefit p {font-size:1.25rem; font-weight:700; margin-bottom:20px;}
+main .showcase .showcase_container .showcase_wrap .showcase_content .showcase_benefit .benefit_list {}
+main .showcase .showcase_container .showcase_wrap .showcase_content .showcase_benefit .benefit_list li {margin-bottom:20px;}
+main .showcase .showcase_container .showcase_wrap .showcase_content .showcase_benefit .benefit_list li:last-child {margin-bottom:0;}
 /* ------------------------------e : main */
