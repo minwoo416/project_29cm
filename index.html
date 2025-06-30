@@ -6,7 +6,13 @@
     <title>29CM | 감도 깊은 취향 셀렉트샵</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <script src="#"></script>
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <header>
@@ -50,9 +56,9 @@
         </div>
     </header>
     <main>
-        <div class="banner"><!-- 배너+버튼까지 모두 묶음 -->
-            <div class="banner_wrap"><!-- 보이는 배너 -->
-                <div class="banner_container"><!-- 모든 배너 묶음 -->
+        <!-- <div class="banner">배너+버튼까지 모두 묶음
+            <div class="banner_wrap">보이는 배너
+                <div class="banner_container">모든 배너 묶음
                     <a href="#"><img src="./images/banner001.jpg" alt=""></a>
                     <a href="#"><img src="./images/banner002.jpg" alt=""></a>
                     <a href="#"><img src="./images/banner003.jpg" alt=""></a>
@@ -62,12 +68,31 @@
                 </div>
             </div>
             <div class="btn_wrap">
-                <!-- 슬라이드바 -->
+                슬라이드바
                 <p><span>01 </span>/ 06</p>
                 <button type="button" class="prev_btn"><img src="./images/prev_btn_icon.png" alt=""></button>
                 <button type="button" class="next_btn"><img src="./images/next_btn_icon.png" alt=""></button>
             </div>
-        </div>
+        </div> -->
+        <section class="banner_wrap">
+            <div class="swiper banner"><!-- 배너+버튼까지 모두 묶음 -->
+                <div class="swiper-wrapper banner_wrap"><!-- 보이는 배너 -->
+                    <div class="swiper-slide slide1"><a href="#"><img src="./images/banner001.jpg" alt=""></a></div>
+                    <div class="swiper-slide slide1"><a href="#"><img src="./images/banner002.jpg" alt=""></a></div>
+                    <div class="swiper-slide slide1"><a href="#"><img src="./images/banner003.jpg" alt=""></a></div>
+                    <div class="swiper-slide slide1"><a href="#"><img src="./images/banner001.jpg" alt=""></a></div>
+                    <div class="swiper-slide slide1"><a href="#"><img src="./images/banner002.jpg" alt=""></a></div>
+                    <div class="swiper-slide slide1"><a href="#"><img src="./images/banner003.jpg" alt=""></a></div>
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <!-- 슬라이드바 -->
+                <p><span>01 </span>/ 06</p>
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
         <section class="special_order">
             <h2>Special-Order</h2>
             <p><a href="#">더보기</a></p>
@@ -177,14 +202,14 @@
             <div class="best_product_container">
                 <div class="best_category">
                     <ul>
-                        <li>Men</li>
-                        <li>Women</li>
-                        <li>House</li>
-                        <li>Electronics</li>
-                        <li>Beauty</li>
-                        <li>Food</li>
-                        <li>Leisure</li>
-                        <li>Kids</li>
+                        <li><button type=button>Men</button></li>
+                        <li><button type=button>Women</button></li>
+                        <li><button type=button>House</button></li>
+                        <li><button type=button>Electronics</button></li>
+                        <li><button type=button>Beauty</button></li>
+                        <li><button type=button>Food</button></li>
+                        <li><button type=button>Leisure</button></li>
+                        <li><button type=button>Kids</button></li>
                     </ul>
                 </div>
                 <div class="best_btn">
@@ -199,21 +224,20 @@
                             <div class="best_content">
                                 <p class="best_brand">
                                     <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
                                 <p class="best_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
                                 <p class="best_product_price">159,000</p>
                                 <p class="small_tag">무료배송</p>
                                 <div class="best_product_color">
-                                    <button type="button" class="best_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
                                     <button type="button" class="best_product_color_change">+</button>
                                 </div>
-                            </a>
                             </div>
                         </div>
                         <div class="best_product best_product02">
@@ -221,45 +245,38 @@
                             <div class="best_content">
                                 <p class="best_brand">
                                     <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="best_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="best_product_price">159,000</p>
+                                <p class="best_product_name">Comfort Shirt - 23 Color</p>
+                                <p class="best_product_price">189,000</p>
                                 <p class="small_tag">무료배송</p>
                                 <div class="best_product_color">
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
                                     <button type="button" class="best_product_color_change">+</button>
                                 </div>
-                            </a>
                             </div>
                         </div>
                         <div class="best_product best_product03">
                             <a href="#"><img src="./images/best003.jpg" alt=""></a>
                             <div class="best_content">
                                 <p class="best_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">어나더오피스</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="best_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
+                                <p class="best_product_name">Santiago Denim Pants (Indigo)</p>
                                 <p class="best_product_price_before"><del>168,000</del></p>
-                                <p class="best_product_price_sale">10%</p>
-                                <p class="best_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="best_product_color">
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change">+</button>
+                                <div class="best_product_price_sale_wrap">
+                                    <p class="best_product_price_sale">10%</p>
+                                    <p class="best_product_price">151,200</p>
                                 </div>
-                            </a>
+                                <div class="best_product_color">
+                                    <span class="best_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="best_product best_product04">
@@ -267,134 +284,139 @@
                             <div class="best_content">
                                 <p class="best_brand">
                                     <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="best_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="best_product_price">159,000</p>
+                                <p class="best_product_name">Comfort Shirt_Stripe - 11 Color</p>
+                                <p class="best_product_price">189,000</p>
                                 <p class="small_tag">무료배송</p>
                                 <div class="best_product_color">
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
                                     <button type="button" class="best_product_color_change">+</button>
                                 </div>
-                            </a>
                             </div>
                         </div>
                     </div>
                     <div class="best_product_wrap best_bottom">
-                        <div class="best_product best_product01">
+                        <div class="best_product best_product05">
                             <a href="#"><img src="./images/best005.jpg" alt=""></a>
                             <div class="best_content">
                                 <p class="best_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">이스트로그 퍼머넌트</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="best_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="best_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
+                                
+                                <p class="best_product_name">[스페셜오더] ONE POCKET T-SHIRT new ver.<br>(12 COLORS)</p>
+                                <p class="best_product_price_before"><del>48,000원</del></p>
+                                <div class="best_product_price_sale_wrap">
+                                    <p class="best_product_price_sale">20%</p>
+                                    <p class="best_product_price">38,400</p>
+                                </div>
                                 <div class="best_product_color">
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
                                     <button type="button" class="best_product_color_change">+</button>
                                 </div>
-                            </a>
                             </div>
                         </div>
-                        <div class="best_product best_product02">
+                        <div class="best_product best_product06">
                             <a href="#"><img src="./images/best006.jpg" alt=""></a>
                             <div class="best_content">
                                 <p class="best_brand">
                                     <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="best_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="best_product_price">159,000</p>
+                                <p class="best_product_name">Garment Washed Cargo Pants - 3 Color</p>
+                                <p class="best_product_price">259,000</p>
                                 <p class="small_tag">무료배송</p>
                                 <div class="best_product_color">
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change">+</button>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
                                 </div>
-                            </a>
                             </div>
                         </div>
-                        <div class="best_product best_product03">
+                        <div class="best_product best_product07">
                             <a href="#"><img src="./images/best007.jpg" alt=""></a>
                             <div class="best_content">
                                 <p class="best_brand">
                                     <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="best_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="best_product_price_before"><del>168,000</del></p>
-                                <p class="best_product_price_sale">10%</p>
+                                <p class="best_product_name">Short Sleeve Comfort Shirt - 12 Color</p>
                                 <p class="best_product_price">159,000</p>
                                 <p class="small_tag">무료배송</p>
                                 <div class="best_product_color">
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
                                     <button type="button" class="best_product_color_change">+</button>
                                 </div>
-                            </a>
                             </div>
                         </div>
-                        <div class="best_product best_product04">
+                        <div class="best_product best_product08">
                             <a href="#"><img src="./images/best008.jpg" alt=""></a>
                             <div class="best_content">
                                 <p class="best_brand">
                                     <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="best_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
+                                <p class="best_product_name">Short Sleeve Comfort Shirt_Cotton/Linen - 9 Color</p>
                                 <p class="best_product_price">159,000</p>
                                 <p class="small_tag">무료배송</p>
                                 <div class="best_product_color">
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
-                                    <button type="button" class="best_product_color_change"></button>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
+                                    <span class="best_product_color_change"></span>
                                     <button type="button" class="best_product_color_change">+</button>
                                 </div>
-                            </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="brand"></section>
+        <section class="brand">
+            <h2>BRAND</h2>
+            <div class="brand_show_wrap"><!-- 보이는 영역 -->
+                <div class="brand_container"><!-- 전체 묶음 -->
+                    <a href="#"><img src="./images/brand001.jpg" alt=""></a>
+                    <a href="#"><img src="./images/brand002.jpg" alt=""></a>
+                    <a href="#"><img src="./images/brand003.jpg" alt=""></a>
+                    <a href="#"><img src="./images/brand004.jpg" alt=""></a>
+                    <a href="#"><img src="./images/brand001.jpg" alt=""></a>
+                    <a href="#"><img src="./images/brand002.jpg" alt=""></a>
+                </div>
+            </div>
+        </section>
         <section class="new">
             <h2>NEW</h2>
             <p><a href="#">더보기 <img src="./images/arrow_down.png" alt=""></a></p>
             <div class="new_product_container">
                 <div class="new_category">
                     <ul>
-                        <li>Men</li>
-                        <li>Women</li>
-                        <li>House</li>
-                        <li>Electronics</li>
-                        <li>Beauty</li>
-                        <li>Food</li>
-                        <li>Leisure</li>
-                        <li>Kids</li>
+                        <li><button type="button">Men</button></li>
+                        <li><button type="button">Women</button></li>
+                        <li><button type="button">House</button></li>
+                        <li><button type="button">Electronics</button></li>
+                        <li><button type="button">Beauty</button></li>
+                        <li><button type="button">Food</button></li>
+                        <li><button type="button">Leisure</button></li>
+                        <li><button type="button">Kids</button></li>
                     </ul>
                 </div>
                 <div class="new_btn">
@@ -408,178 +430,154 @@
                             <a href="#"><img src="./images/best001.jpg" alt=""></a>
                             <div class="new_content">
                                 <p class="new_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">토에즈</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="new_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="new_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="new_product_color">
-                                    <button type="button" class="new_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change">+</button>
+                                <p class="new_product_name">코튼 에센셜 쇼츠</p>
+                                <p class="new_product_price_before"><del>153,000</del></p>
+                                <div class="new_product_price_sale_wrap">
+                                    <p class="new_product_price_sale">10%</p>
+                                    <p class="new_product_price">137,700</p>
                                 </div>
-                            </a>
+                                <div class="new_product_color">
+                                    <span class="new_product_color_change"></span>
+                                    <span class="new_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="new_product new_product02">
                             <a href="#"><img src="./images/new002.jpg" alt=""></a>
                             <div class="new_content">
                                 <p class="new_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">토에즈</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="new_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="new_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="new_product_color">
-                                    <button type="button" class="new_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change">+</button>
+                                <p class="new_product_name">린넨 테이퍼드핏 팬츠</p>
+                                <p class="new_product_price_before"><del>238,000</del></p>
+                                <div class="new_product_price_sale_wrap">
+                                    <p class="new_product_price_sale">10%</p>
+                                    <p class="new_product_price">214,200</p>
                                 </div>
-                            </a>
+                                <div class="new_product_color">
+                                    <span class="new_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="new_product new_product03">
                             <a href="#"><img src="./images/new003.jpg" alt=""></a>
                             <div class="new_content">
                                 <p class="new_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">토에즈</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="new_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="new_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="new_product_color">
-                                    <button type="button" class="new_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change">+</button>
+                                <p class="new_product_name">린넨 슬럽 라운드넥 티셔츠</p>
+                                <p class="new_product_price_before"><del>58,000</del></p>
+                                <div class="new_product_price_sale_wrap">
+                                    <p class="new_product_price_sale">10%</p>
+                                    <p class="new_product_price">52,200</p>
                                 </div>
-                            </a>
+                                <div class="new_product_color">
+                                    <span class="new_product_color_change"></span>
+                                    <span class="new_product_color_change"></span>
+                                    <span class="new_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="new_product new_product04">
                             <a href="#"><img src="./images/new004.jpg" alt=""></a>
                             <div class="new_content">
                                 <p class="new_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">토에즈</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="new_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="new_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="new_product_color">
-                                    <button type="button" class="new_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change">+</button>
+                                <p class="new_product_name">텍스쳐드 루즈핏 쇼츠</p>
+                                <p class="new_product_price_before"><del>83,000</del></p>
+                                <div class="new_product_price_sale_wrap">
+                                    <p class="new_product_price_sale">10%</p>
+                                    <p class="new_product_price">74,700</p>
                                 </div>
-                            </a>
+                                <div class="new_product_color">
+                                    <span class="new_product_color_change"></span>
+                                    <span class="new_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="new_product_wrap new_bottom ">
-                        <div class="new_product new_product01">
+                        <div class="new_product new_product05">
                             <a href="#"><img src="./images/new005.jpg" alt=""></a>
                             <div class="new_content">
                                 <p class="new_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">토에즈</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="new_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="new_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="new_product_color">
-                                    <button type="button" class="new_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change">+</button>
+                                <p class="new_product_name">텍스쳐드 라운드넥 티셔츠</p>
+                                <p class="new_product_price_before"><del>78,000</del></p>
+                                <div class="new_product_price_sale_wrap">
+                                    <p class="new_product_price_sale">10%</p>
+                                    <p class="new_product_price">70,200</p>
                                 </div>
-                            </a>
+                                <div class="new_product_color">
+                                    <span class="new_product_color_change"></span>
+                                    <span class="new_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="new_product new_product02">
+                        <div class="new_product new_product06">
                             <a href="#"><img src="./images/new006.jpg" alt=""></a>
                             <div class="new_content">
                                 <p class="new_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">토에즈</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="new_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="new_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="new_product_color">
-                                    <button type="button" class="new_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change">+</button>
+                                <p class="new_product_name">린넨 스트레이트핏 밴딩 팬츠</p>
+                                <p class="new_product_price_before"><del>188,000</del></p>
+                                <div class="new_product_price_sale_wrap">
+                                    <p class="new_product_price_sale">10%</p>
+                                    <p class="new_product_price">169,200</p>
                                 </div>
-                            </a>
+                                <div class="new_product_color">
+                                    <span class="new_product_color_change"></span>
+                                    <span class="new_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="new_product new_product03">
+                        <div class="new_product new_product07">
                             <a href="#"><img src="./images/new007.jpg" alt=""></a>
                             <div class="new_content">
                                 <p class="new_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">토에즈</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="new_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="new_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="new_product_color">
-                                    <button type="button" class="new_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change">+</button>
+                                <p class="new_product_name">린넨 에센셜 셔츠</p>
+                                <p class="new_product_price_before"><del>173,000</del></p>
+                                <div class="new_product_price_sale_wrap">
+                                    <p class="new_product_price_sale">10%</p>
+                                    <p class="new_product_price">155,700</p>
                                 </div>
-                            </a>
+                                <div class="new_product_color">
+                                    <span class="new_product_color_change"></span>
+                                    <span class="new_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="new_product new_product04">
+                        <div class="new_product new_product08">
                             <a href="#"><img src="./images/new008.jpg" alt=""></a>
                             <div class="new_content">
                                 <p class="new_brand">
-                                    <a href="#">포터리</a>
-                                    <button type="button"><img src="./images/favorite_on_icon.png" alt="위시리스트 추가"></button>
+                                    <a href="#">토에즈</a>
+                                    <button type="button"><img src="./images/favorite_off_icon.png" alt="위시리스트 추가"></button>
                                 </p>
-                                <p class="new_product_name">Short Sleeve Comfort Polo Knit - 24 Color</p>
-                                <p class="new_product_price">159,000</p>
-                                <p class="small_tag">무료배송</p>
-                                <div class="new_product_color">
-                                    <button type="button" class="new_product_color_change"><!-- 이미지넣기 --></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change"></button>
-                                    <button type="button" class="new_product_color_change">+</button>
+                                <p class="new_product_name">린넨 롤업 쇼츠</p>
+                                <p class="new_product_price_before"><del>178,000</del></p>
+                                <div class="new_product_price_sale_wrap">
+                                    <p class="new_product_price_sale">10%</p>
+                                    <p class="new_product_price">160,200</p>
                                 </div>
-                            </a>
+                                <div class="new_product_color">
+                                    <span class="new_product_color_change"></span>
+                                    <span class="new_product_color_change"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -587,9 +585,254 @@
                 </div>
             </div>
         </section>
-        <section class="ad"></section>
-        <div class="more_container"></div>
+        <section class="more_plus">
+            <div class="ad">
+                <div class="copon">
+                    <a href="#"><img src="./images/bottom_ad001.jpg" alt=""></a>
+                    <div class="copon_content">
+                        <h3>앙코르입점회</h3>
+                        <p>최애 브랜드의 29% 쿠폰</p>
+                    </div>
+                </div>
+                <div class="new_style">
+                    <a href="#"><img src="./images/bottom_ad001-1.jpg" alt=""></a>
+                    <div class="new_style_content">
+                        <h3>오늘은 팬츠 / 원피스 데이</h3>
+                        <p>매일 새로운 스타일을 만나요</p>
+                    </div>
+                </div>
+            </div>
+            <div class="show_container">
+                <div class="show_wrap show_top_wrap ">
+                    <div class="show_product show_product01">
+                        <a href="#"><img src="./images/big_thumbnail001.jpg" alt=""></a>
+                        <h4>시즌오프 소식</h4>
+                        <p>앤아더스토리즈의 반가운 할인 소식을 전해요.</p>
+                        <div class="show_product_content show_product_content01">
+                            <p class="show_images"><img src="./images/thumbnail001_01.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">앤아더스토리즈</a></p>
+                                <p><a href="#">(W) 새틴 슬립 미디 드레스 (Black/White)</a></p>
+                                <p><span>30%</span>83,300</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                        <div class="show_product_content show_product_content02">
+                            <p class="show_images"><img src="./images/thumbnail001_02.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">앤아더스토리즈</a></p>
+                                <p><a href="#">(W) 스몰 보우 엠벨리시드 백 (Blue)</a></p>
+                                <p><span>30%</span>55,300</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="show_product show_product02">
+                        <a href="#"><img src="./images/big_thumbnail002.jpg" alt=""></a>
+                        <h4>실용적인 디자인</h4>
+                        <p>애프터프레이의 베스트 상품을 최대 29% 쿠폰 혜택과 함께 만나보세요.</p>
+                        <div class="show_product_content show_product_content01">
+                            <p class="show_images"><img src="./images/thumbnail002_01.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">애프터프레이</a></p>
+                                <p><a href="#">엠브로이드 러브 볼캡 베이지</a></p>
+                                <p><span>19%</span>39,690</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                        <div class="show_product_content show_product_content02">
+                            <p class="show_images"><img src="./images/thumbnail002_02.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">애프터프레이</a></p>
+                                <p><a href="#">세렝게티 스트라이프 티셔츠 그레이</a></p>
+                                <p><span>37%</span>43,470</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="show_product show_product03">
+                        <a href="#"><img src="./images/big_thumbnail003.jpg" alt=""></a>
+                        <h4>꼬민지의 에센셜 가방</h4>
+                        <p>여름 스타일에 자연스럽게 녹아드는 가방을 소개해요. 단독 12% 혜택을 놓치지 마세요.</p>
+                        <div class="show_product_content show_product_content01">
+                            <p class="show_images"><img src="./images/thumbnail003_01.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">루에브르</a></p>
+                                <p><a href="#">Tour Hobo Large FA5SD331-FH</a></p>
+                                <p><span>19%</span>144,990</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                        <div class="show_product_content show_product_content02">
+                            <p class="show_images"><img src="./images/thumbnail003_02.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">분크</a></p>
+                                <p><a href="#">Hey Pin Tuck Leather Backpack M (헤이 핀턱 레더 백팩 미듐) Black</a></p>
+                                <p>345,000</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show_wrap show_bottom_wrap">
+                    <div class="show_product show_product04">
+                        <a href="#"><img src="./images/big_thumbnail004.jpg" alt=""></a>
+                        <h4>일상 속 작은 즐거움</h4>
+                        <p>가볍고 감성적인 테이블웨어, 엘리건트테이블과 함께 일상에 소소한 즐거움을 더해보세요.</p>
+                        <div class="show_product_content show_product_content01">
+                            <p class="show_images"><img src="./images/thumbnail004_01.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">엘리건트테이블</a></p>
+                                <p><a href="#">[우드티포크증정이벤트/선물세트] 아이보리앤도트 머그& 튜브플레이트 선물세트 1인 디저트 홈카페</a></p>
+                                <p><span>38%</span>18,318</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                        <div class="show_product_content show_product_content02">
+                            <p class="show_images"><img src="./images/thumbnail004_02.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">엘리건트테이블</a></p>
+                                <p><a href="#">[우드티포크증정이벤트/선물세트] 헤움 무광 티타임세트 4p선물세트 고블렛 플레이트</a></p>
+                                <p><span>32%</span>31,098</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="show_product show_product05">
+                        <a href="#"><img src="./images/big_thumbnail005.jpg" alt=""></a>
+                        <h4>자유로운 모험의 시작</h4>
+                        <p>기술적 디테일과 캐주얼 요소를 적절히 조합한 고요웨어. 최대 29% 혜택으로 준비했어요.</p>
+                        <div class="show_product_content show_product_content01">
+                            <p class="show_images"><img src="./images/thumbnail005_01.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">고요웨어</a></p>
+                                <p><a href="#">2.5L ESSENTIAL SHELL JACKET (BLACK)</a></p>
+                                <p><span>40%</span>208,800</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                        <div class="show_product_content show_product_content02">
+                            <p class="show_images"><img src="./images/thumbnail005_02.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">고요웨어</a></p>
+                                <p><a href="#">TRAIL RUNNING SHORTS (BLACK)</a></p>
+                                <p><span>15%</span>43,470</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="show_product show_product06">
+                        <a href="#"><img src="./images/big_thumbnail006.jpg" alt=""></a>
+                        <h4>북유럽의 여름</h4>
+                        <p>상쾌한 여름을 위한 라부르켓 바디케어 라인을 10% 혜택으로 만나보세요.</p>
+                        <div class="show_product_content show_product_content01">
+                            <p class="show_images"><img src="./images/thumbnail006_01.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">라부르켓</a></p>
+                                <p><a href="#">룸 디퓨저 200ml 5종 택1(+폴딩백 증정)</a></p>
+                                <p><span>18%</span>106,360</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                        <div class="show_product_content show_product_content02">
+                            <p class="show_images"><img src="./images/thumbnail006_02.jpg" alt=""></p>
+                            <div class="show_content">
+                                <p><a href="#">라부르켓</a></p>
+                                <p><a href="#">[1+1] 프레그런스 태그 블랙 오크</a></p>
+                                <p><span>3%</span>37,830</p>
+                            </div>
+                            <button type="button"><img src="./images/favorite_off_icon.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden_more_btn">
+                    <button type="button">more
+                        <img src="./images/arrow_down_white.png" alt="더보기">
+                    </button>
+                    
+                </div>
+                <div class="hidden_container"><!-- more버튼 클릭 시 무한 스크롤 --></div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer_top">
+            <div class="call">
+                <p><span>고객센터 1660-2929</span></p>
+                <p>운영시간 : 평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00 제외)</p>
+            </div>
+            <div class="sns">
+                <a href="#"><img src="./images/instar.png" alt=""></a>
+                <a href="#"><img src="./images/youtube.png" alt=""></a>
+                <a href="#"><img src="./images/apple.png" alt=""></a>
+                <a href="#"><img src="./images/playstore.png" alt=""></a>
+            </div>
+        </div>
+        <div class="footer_mid">
+            <dl class="footer_info">
+                <dt>ABOUT US</dt>
+                <dd><a href="#">29CM 소개</a></dd>
+                <dd><a href="#">인재채용</a></dd>
+                <dd><a href="#">상시 할인 혜택</a></dd>
+            </dl>
+            <dl class="footer_info">
+                <dt>MY ORDER</dt>
+                <dd><a href="#">주문배송</a></dd>
+                <dd><a href="#">취소/교환/반품 내역</a></dd>
+                <dd><a href="#">상품리뷰 내역</a></dd>
+                <dd><a href="#">증빙서류발급</a></dd>
+            </dl>
+            <dl class="footer_info">
+                <dt>MY ACCOUNT</dt>
+                <dd><a href="#">회원정보수정</a></dd>
+                <dd><a href="#">회원등급</a></dd>
+                <dd><a href="#">마일리지현황</a></dd>
+                <dd><a href="#">쿠폰</a></dd>
+            </dl>
+            <dl class="footer_info">
+                <dt>HELP</dt>
+                <dd><a href="#">1:1 문의</a></dd>
+                <dd><a href="#">마케팅 제휴, 입점, 대량 주문 문의</a></dd>
+                <dd><a href="#">상품 Q&A내역</a></dd>
+                <dd><a href="#">공지사항</a></dd>
+                <dd><a href="#">FAQ</a></dd>
+                <dd><a href="#">고객의 소리</a></dd>
+            </dl>
+        </div>
+        <div class="footer_bottom">
+            <div class="footer_bottom_menu">
+                <a href="#"><span>개인정보 처리방침</span></a>
+                <a href="#">이용약관</a>
+                <a href="#">분쟁해결기준</a>
+                <a href="#">안전거래센터</a>
+                <a href="#">결제대행 위탁사</a>
+            </div>
+            <div class="footer_bottom_address">
+                <address>
+                    <div class="footer_row footer1row">
+                        <span>상호명: (주)무신사</span>
+                        <span>사업장소재지: 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 N1)</span>
+                        <span>팩스: 070-8622-7737</span>
+                        <span>사업자등록번호: 211-88-79575</span>
+                        <span>통신판매업신고: 2022-서울성동-01952</span>
+                        <span>사업자정보확인</span>
+                    </div>
+                    <div class="footer_row footer2row">
+                        <span>전화번호: 1660-2929</span>
+                        <span>이메일: customer@29cm.co.kr</span>
+                        <span>대표: 조만호, 박준모</span>
+                        <span>호스팅서비스: (주)무신사</span>
+                    </div>
+                    <div class="footer_row footer3row">
+                        <p>일부 상품의 경우 29CM는 통신판매의 당사자가 아닌 통신판매중개자로서 상품, 상품정보, 거래에 대한 책임이 제한될 수 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.</p>
+                    </div>
+                </address>
+                <div class="chk">
+                    <img src="./images/check.png" alt="">
+                    <span>KG 에스크로<br>가입 사실 확인></span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
