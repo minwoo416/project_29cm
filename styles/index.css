@@ -92,24 +92,11 @@ main .banner_wrap .banner_btn_wrap .pagination_arrow_group .swiper-arrow_wrap .s
     width:20px; height:20px;
     display:flex; align-items:center; justify-content:center;
     top:30px;
-
-}
-main .banner_wrap .banner_btn_wrap .pagination_arrow_group .swiper-arrow_wrap .swiper-button-prev::after {
-    content:'';
-    background:url(../images/prev_btn_icon.png) center / contain;
-    width:20px; height:20px;
-    display:block;
 }
 main .banner_wrap .banner_btn_wrap .pagination_arrow_group .swiper-arrow_wrap .swiper-button-next {
     width:20px; height:20px;
     display:flex; align-items:center; justify-content:center;
     top:30px;
-}
-main .banner_wrap .banner_btn_wrap .pagination_arrow_group .swiper-arrow_wrap .swiper-button-next::after {
-    content:'';
-    background:url(../images/next_btn_icon.png) center / contain ;
-    width:20px; height:20px;
-    display:block;
 }
 /* ----------------------------------------------------------------------------------------2행 스페셜오더 */
 /* 모든 섹션 탑에 마진 */
@@ -172,7 +159,7 @@ main .showcase > p {margin:15px 0 50px;}
 main .showcase p a{}
 main .showcase .showcase_container {}
 main .showcase .showcase_container .showcase_wrap {/* 공통 소케이스 이 부분은 1920px  */
-    display:flex; align-items:center;
+    display:flex; align-items:center; background:#fdfdfd;
 }
 /* 개별 쇼케이스 부분 */
 /* 1 */
@@ -236,32 +223,48 @@ main .showcase .showcase_container .showcase_wrap .showcase_content .showcase_be
 /* ------------------------------e : main */
 /* ----------------------------------------------------------------------------------------4행 best */
 /* 스와이퍼 */
-main .best .swiper {background:red; position:relative;}
-main .best .swiper .best_btn {position:relative; background:pink; display:flex; align-items:center; width:120px; height:100px;}
-main .best .swiper .best_btn .swiper-pagination {top:0; display:block;}
-main .best .swiper .best_btn .swiper-button-prev {top:0; width:20px; height:20px;}
-main .best .swiper .best_btn .swiper-button-prev::after {
+main .best .swiper {position:relative;}
+main .best .swiper .swiper-wrapper {position:relative;}
+main .best .swiper .swiper-wrapper .swiper-slide {position:relative;}
+main .best .swiper .best_btn {
+    position:absolute; display:flex; flex-flow:row-reverse; align-items:center;
+    width:120px; height:max-content; top:0; right:0;
+}
+main .best .swiper .best_btn .swiper-pagination {
+    left:0; top:0; display:flex; align-items:center;
+    font-size:0.75rem; background:red;
+}
+main .best .swiper .best_btn .arrow_wrap {
+    width:70px; height:40px;
+    display:flex; position:relative;
+    align-items:center; background:pink;
+}
+main .best .swiper .best_btn .arrow_wrap .swiper-button-prev {width:20px; height:20px;
+    display:flex; align-items:center; justify-content:center;
+    top:30px;}
+main .best .swiper .best_btn .arrow_wrap .swiper-button-prev::after {
     content:'';
     background:url(../images/prev_btn_icon.png) center / contain ;
     width:20px; height:20px;
     display:block;
 }
-main .best .swiper .best_btn .swiper-button-next {}
-main .best .swiper .best_btn .swiper-button-next::after {
+main .best .swiper .best_btn .arrow_wrap .swiper-button-next {
+    width:20px; height:20px;
+    display:flex; align-items:center; justify-content:center;
+    top:30px;}
+main .best .swiper .best_btn .arrow_wrap .swiper-button-next::after {
     content:'';
     background:url(../images/next_btn_icon.png) center / contain ;
     width:20px; height:20px;
     display:block;
 }
-main .best .swiper .swiper-wrapper {background:blue; position:relative;}
-main .best .swiper .swiper-wrapper .swiper-slide {position:relative;}
 /* 내용 */
-main .best {max-width:1720px; margin:100px auto 0; text-align:center; position:relative;}
+main .best {max-width:1720px; margin:100px auto 0; text-align:center; position:relative; background:yellow;}
 main .best h2 {font-size:2.5rem; font-weight:600;}
 main .best > p {margin:15px 0 50px;}
 main .best > p img {}
 main .best .best_product_container {}
-main .best .best_product_container .best_category {display:flex; justify-content:center; }
+main .best .best_product_container .best_category {display:flex; justify-content:center; background:orange;}
 main .best .best_product_container .best_category ul {display:flex;}
 main .best .best_product_container .best_category ul li {/* padding:10px 20px; background:#eee; border-radius:25px; margin-right:20px; */}
 main .best .best_product_container .best_category ul li button {padding:10px 20px; background:#eee; border-radius:25px; margin-right:20px;}
