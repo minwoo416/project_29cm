@@ -1,5 +1,12 @@
 const wishlistBtns = document.querySelectorAll('.wishlist_plus');
-
+const longBanner = document.querySelector('header .long_banner');
+const longBannerClose = document.querySelector('header .long_banner .close');
+const lnbWrap = document.querySelector('header .lnb');
+console.log(wishlistBtns, longBanner, longBannerClose)
+longBannerClose.addEventListener('click',()=>{
+    longBanner.style.display ='none'
+    lnbWrap.style.marginBottom = '10px'
+})
 wishlistBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const img = btn.querySelector('img'); // 버튼 안의 이미지 태그
@@ -15,14 +22,11 @@ wishlistBtns.forEach(btn => {
 });
 
 
-
-
-
-
 //-------------스와이퍼 모음-----------
 //배너 스와이퍼
 const bnr1 = new Swiper('.banner', {
     slidesPerView:2.5,
+    autoplay:{delay:2000},
     loop:true,
     navigation: {
         prevEl: ".banner_btn_wrap .pagination_arrow_group .swiper-arrow_wrap .swiper-button-prev",
@@ -120,3 +124,25 @@ newCategory.forEach((li, i) => {
     });
 });
 updateNewCategory(newBtn.activeIndex);
+
+
+/* 무한스크롤 */
+;
+const template = document.querySelector('.show_container .show_product_wrap');
+const hiddenMoreBtn = document.querySelector('.show_container .hidden_more_btn');
+const hiddenContainer = document.querySelector('.show_container .hidden_container');
+console.log(template, hiddenMoreBtn, hiddenContainer);
+
+let count = 0;
+const max = 3; // 몇 개까지 보여줄지
+
+hiddenMoreBtn.addEventListener('click', () => {
+    if (count >= max) {
+    hiddenMoreBtn.style.display = 'none';
+    return;
+    }
+// 복제
+const clone = template.cloneNode(true); // true면 안쪽 내용까지 복제
+hiddenContainer.appendChild(clone);
+count++;
+});
