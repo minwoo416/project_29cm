@@ -20,8 +20,6 @@ wishlistBtns.forEach(btn => {
         }
     });
 });
-
-
 //-------------스와이퍼 모음-----------
 //배너 스와이퍼
 const bnr1 = new Swiper('.banner', {
