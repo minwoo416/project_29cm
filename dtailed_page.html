@@ -19,7 +19,7 @@
                 <a href="#">로그인</a>
             </div>
             <div class="bottom_menu">
-                <h1><a href="#" id="logo"><img src="./images/logo.jpg" alt="29cm"></a></h1>
+                <h1><a href="./index.html" id="logo"><img src="./images/logo.jpg" alt="29cm"></a></h1>
                 <div class="human_heart_cart">
                     <a href="#" class="my_page"><img src="./images/person_icon.png" alt="마이페이지"></a>
                     <a href="#" class="wishlist"><img src="./images/wishlist.png" alt="위시리스트"></a>
@@ -178,6 +178,23 @@
                                     <option value="white">White</option>
                                 </select>
                                 <img src="./images/arrow_down_buy.png" alt="">
+                            </div>
+                        </div>
+                        <!-- JS에서 select클릭 시 출력되는 영역 시작 -->
+                        <div class="order_select">
+                            <p class="list">
+                                사이즈:<em class="size">S</em>
+                                색상:<em class="color">블랙</em>
+                            </p>
+                            <a href="#" class="close">X</a>
+                            <div class="order_num">
+                                <button type="button" id="minus">-</button>
+                                <input type="number" value="1" name="user_num">
+                                <button type="button" id="plus">+</button>
+                            </div>
+                            <div class="total">
+                                <p>주문금액</p>
+                                <p class="price"><em>0</em>원</p>
                             </div>
                         </div>
                         <div class="product_cart_buy_btn">

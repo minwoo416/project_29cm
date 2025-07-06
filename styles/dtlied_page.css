@@ -78,6 +78,38 @@ main .product_container .product_buy_container .product_right_wrap .product_buy_
     position:absolute; top:11.5px; right:20px;
 }
 main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .select_size_color .select_color #color option {}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select {
+    background:#eee; position:relative; padding:10px;
+    margin:30px 0;
+}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .list {}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .list em {margin:0 15px 0 5px; font-weight:500;}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .list .color {}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .list .size {}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .close {position:absolute; top:10px; right:10px;}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .order_num {
+    margin:20px 0; border:1px solid #000; width:max-content;
+    height:30px; display:flex;
+}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .order_num button {
+    width:20px; 
+    background:#000; color:#fff;
+}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .order_num #minus {}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .order_num input {
+    width:50px; height:100%; 
+    text-align:center;
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .order_num #plus {}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .total {display:flex; justify-content:space-between;}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .total p {}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .total p:nth-child(1) {
+    font-size:1.125rem; font-weight:600;
+}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .total .price {}
+main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .order_select .total .price em {font-weight:500; margin-right:10px;}
 main .product_container .product_buy_container .product_right_wrap .product_buy_wrap .product_cart_buy_btn {
     display:flex; justify-content:space-between;
     margin-top:30px;
