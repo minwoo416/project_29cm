@@ -1,0 +1,52 @@
+main {max-width:1720px; margin:30px auto 0;}
+main h2 {font-size:2.5rem; font-weight:600;}
+main .product_container {margin-top:50px; display:flex; justify-content:space-between;}
+main .product_container .snb {display:flex; flex-flow:column nowrap; gap:30px; width:100px;}
+main .product_container .snb > li {font-size:1.125rem; font-weight:500;}
+main .product_container .snb > li .snb_depth {margin-top:15px; display:flex; flex-flow:column nowrap; gap:10px; padding-left:20px; display:none;}
+main .product_container .snb > li .snb_depth li {}
+main .product_container .snb > li .snb_depth li a {font-size:0.875rem;}
+/* snb 효과 */
+main .product_container .product_list { width:1490px;}
+main .product_container .product_list h3 {font-size:1.563rem; font-weight:600;}
+main .product_container .product_list .category_wrap {display:flex; margin:40px 0 30px; justify-content:space-between; position:relative; align-items:center;}
+main .product_container .product_list .category_wrap .category {display:flex; gap:30px;}
+main .product_container .product_list .category_wrap .category li {font-size:0.875rem;}
+main .product_container .product_list .category_wrap .category li.active {font-size:1.125rem; font-weight:500;}
+main .product_container .product_list .category_wrap select {width:100px; padding:5px 10px; border:1px solid #d9d9d9; font-size:0.75rem;}
+main .product_container .product_list .category_wrap select option {font-size:0.75rem; color:#949494;}
+main .product_container .product_list .category_wrap img {width:12px; height:12px; position:absolute; top:6px; right:10px;}
+main .product_container .product_list .product_wrap {display:flex; flex-flow:row wrap; gap:30px;}
+main .product_container .product_list .product_wrap .product {width:350px;}
+main .product_container .product_list .product_wrap .product:hover {filter:brightness(90%);}
+main .product_container .product_list .product_wrap .product a {}
+main .product_container .product_list .product_wrap .product a img {width:100%;}
+main .product_container .product_list .product_wrap .product .product_content {text-align:left; display:flex; flex-flow:column nowrap; gap:10px; height:200px;}
+main .product_container .product_list .product_wrap .product .product_content .product_brand {display:flex; justify-content:space-between;}
+main .product_container .product_list .product_wrap .product .product_content .product_brand a {font-size:0.875rem;}
+main .product_container .product_list .product_wrap .product .product_content .product_brand a .wishlist_plus {}
+main .product_container .product_list .product_wrap .product .product_content .product_brand a .wishlist_plus img {}
+main .product_container .product_list .product_wrap .product .product_content .product_name {font-weight:600; }
+main .product_container .product_list .product_wrap .product .product_content .product_price {font-weight:600;}
+main .product_container .product_list .product_wrap .product .product_content .small_tag {
+    font-size:0.625rem; padding:3px 5px; background:#ddd;
+    width:max-content; height:max-content;
+}
+main .product_container .product_list .product_wrap .product .product_content .product_color {display:flex; align-items:center; gap:10px;}
+main .product_container .product_list .product_wrap .product .product_content .product_color span {width:16px; height:16px; 
+    border-radius:50%; display:inline-block;
+}
+main .product_container .product_list .product_wrap .product .product_content .product_color span:nth-child(1) {background:#F4F0E7;}
+main .product_container .product_list .product_wrap .product .product_content .product_color span:nth-child(2) {background:#56523E;}
+main .product_container .product_list .product_wrap .product .product_content .product_color span:nth-child(3) {background:#50607A;}
+main .product_container .product_list .product_wrap .product .product_content .product_color span:nth-child(4) {background:#DFD6AD;}
+main .product_container .product_list .product_wrap .product .product_content .product_color span:nth-child(5) {background:#97BDC8;}
+main .product_container .product_list .product_wrap .product .product_content .product_color span:nth-child(6) {background:#5C4138;}
+main .product_container .product_list .page_btn {
+    width:max-content; display:flex; gap:10px;
+    margin:20px auto 0; align-items:center;
+}
+main .product_container .product_list .page_btn img {width:15px; height:15px;}
+main .product_container .product_list .page_btn button {
+    width:30px; height:30px;
+}

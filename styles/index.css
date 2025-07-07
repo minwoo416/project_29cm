@@ -1,5 +1,6 @@
 /* ------------------------------s : header */
-body {}
+
+body, main {}
 header {
     /* width:1720px; margin:0 auto; */
     padding-top:10px;
@@ -373,7 +374,6 @@ main .best .best_product_container .best_swiper .best_wrap_show .best_wrap .best
 main .best .best_product_container .best_swiper .best_wrap_show .best_wrap .best_product_wrap .best_product .best_content .small_tag{
     font-size:0.625rem; padding:3px 5px; background:#ddd;
     width:max-content; height:max-content;
-    
 }
 main * .widthlist_plus img {}
 main .best .best_product_container .best_swiper .best_wrap_show .best_wrap .best_product_wrap .best_product .best_content .best_product_color {display:flex; align-items:center; gap:10px;}
