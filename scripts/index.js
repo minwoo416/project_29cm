@@ -2,7 +2,18 @@ const wishlistBtns = document.querySelectorAll('.wishlist_plus');
 const longBanner = document.querySelector('header .long_banner');
 const longBannerClose = document.querySelector('header .long_banner .close');
 const lnbWrap = document.querySelector('header .lnb');
-console.log(wishlistBtns, longBanner, longBannerClose)
+const cateMoreImg = document.querySelector('.lnb .category .category_more img');
+const cateHidden = document.querySelector('header .lnb .cate_menu_hidden');
+const cateClose = document.querySelector('header .lnb .cate_menu_hidden > a')
+console.log(wishlistBtns, longBanner, longBannerClose, cateMoreImg)
+
+cateMoreImg.addEventListener('mouseover',()=>{
+    cateHidden.style.display = 'flex'
+})
+cateClose.addEventListener('click',()=>{
+    cateHidden.style.display = 'none'
+})
+
 longBannerClose.addEventListener('click',()=>{
     longBanner.style.display ='none'
     lnbWrap.style.marginBottom = '10px'
