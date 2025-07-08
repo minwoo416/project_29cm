@@ -34,10 +34,10 @@ const snb = document.querySelectorAll('.snb > li');
 const snbDepth = document.querySelectorAll('.snb .snb_depth');
 console.log(snb, snbDepth)
 snb.forEach((obj, idx)=>{
-    obj.addEventListener('mouseover',()=>{
+    obj.addEventListener('mouseenter',()=>{
         snbDepth[idx].style.display = 'flex';
     })
-    obj.addEventListener('mouseout',()=>{
+    obj.addEventListener('mouseleave',()=>{
         snbDepth[idx].style.display = 'none';
     })
 })

@@ -3,7 +3,7 @@
 body, main {}
 header {
     /* width:1720px; margin:0 auto; */
-    padding-top:10px; width:100%;
+    padding-top:10px; width:100%; position:sticky; top:0; left:0; display:block; z-index:999; background:#fff;
 }
 header .gnb {width:1720px; margin:0 auto;}
 header .gnb .top_menu {text-align:right;}
@@ -21,6 +21,9 @@ header .gnb .bottom_menu h1 #logo {}
 header .gnb .bottom_menu .human_heart_cart {}
 header .gnb .bottom_menu .human_heart_cart a {}
 /* --------개별 마이페이지, 위시리스트, 카트-------- */
+header .gnb .bottom_menu .human_heart_cart .my_page:hover img {transform:scale(105%);}
+header .gnb .bottom_menu .human_heart_cart .wishlist:hover img {transform:scale(105%);}
+header .gnb .bottom_menu .human_heart_cart .cart:hover img {transform:scale(105%);}
 header .gnb .bottom_menu .human_heart_cart .my_page {}
 header .gnb .bottom_menu .human_heart_cart .wishlist {margin:0 20px 0;}
 header .gnb .bottom_menu .human_heart_cart .cart{}
@@ -42,11 +45,13 @@ header .lnb .category .category_menu a {margin-right:30px; font-weight:500; padd
 header .lnb .category .category_menu a:hover {border-bottom:1px solid #000;}
 header .lnb .category .category_menu a:last-child {margin-right:0;}
 /* 숨겨지는 메뉴버튼 */
-header .lnb .category .cate_menu_hidden {background:rgba(255,255,255,0.9); padding:30px; position:absolute; top:25px; left:0; z-index: 900; display:none;}
+header .lnb .category .cate_menu_hidden {background:rgba(0,0,0,0.9); padding:50px; position:absolute; top:24px; left:0; z-index: 900; display:none;}
+header .lnb .category .cate_menu_hidden * {color:#fff;}
 header .lnb .category .cate_menu_hidden .depth {display:flex; gap:60px;}
 header .lnb .category .cate_menu_hidden .depth > li {font-size:1.25rem; font-weight:500; width:max-content;} 
 header .lnb .category .cate_menu_hidden .depth > li .depth2 {margin-top:20px;} 
 header .lnb .category .cate_menu_hidden .depth > li .depth2 li {margin-bottom:20px; font-size:1rem;} 
+header .lnb .category .cate_menu_hidden .depth > li .depth2 li:hover a {border-bottom:1px solid #fff;} 
 header .lnb .category .cate_menu_hidden .depth > li .depth2 li a {} 
 header .lnb .category .cate_menu_hidden > a {position:absolute; right:10px; top:10px; font-size:1.25rem; font-weight:500;} 
 header .lnb .search {

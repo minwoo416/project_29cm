@@ -6,11 +6,11 @@ const cateMoreImg = document.querySelector('.lnb .category .category_more img');
 const cateHidden = document.querySelector('header .lnb .cate_menu_hidden');
 const cateClose = document.querySelector('header .lnb .cate_menu_hidden > a')
 console.log(wishlistBtns, longBanner, longBannerClose, cateMoreImg)
-
-cateMoreImg.addEventListener('mouseover',()=>{
+/* lnb */
+cateMoreImg.addEventListener('mouseenter',()=>{
     cateHidden.style.display = 'flex'
 })
-cateClose.addEventListener('click',()=>{
+cateHidden.addEventListener('mouseleave',()=>{
     cateHidden.style.display = 'none'
 })
 
