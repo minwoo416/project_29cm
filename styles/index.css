@@ -135,18 +135,17 @@ main .special_order .special_wrap {
 }
 /* -------------------------swiper 모음--------------------------- */
 main .special_order .special_wrap .swiper-button-prev {}
+main .special_order .special_wrap .swiper-button-prev svg {display:none;} /* swiper업데이트로 svg를 가려줘야 기본 화살표가 숨겨짐 */
+main .special_order .special_wrap .swiper-button-prev img {display:block;}
 main .special_order .special_wrap .swiper-button-next {}
+main .special_order .special_wrap .swiper-button-next svg {display:none;} /* swiper업데이트로 svg를 가려줘야 기본 화살표가 숨겨짐 */
+main .special_order .special_wrap .swiper-button-next .swiper-navigation-icon {}
+main .special_order .special_wrap .swiper-button-next img {}
 main .special_order .special_wrap .swiper-button-prev::after {
-    content:'';
-    background:url(../images/prev_btn_icon.png) center / contain;
-    width:20px; height:20px;
-    display:block;
+    content: none !important;
 }
 main .special_order .special_wrap .swiper-button-next::after {
-    content:'';
-    background:url(../images/next_btn_icon.png) center / contain ;
-    width:20px; height:20px;
-    display:block;
+    display:none !important;
 }
 main .special_order .special_wrap .swiper {width:1300px; display:flex; justify-content:space-between;   }
 main .special_order .special_wrap .swiper .swiper-wrapper {width:max-content;}
